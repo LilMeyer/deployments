@@ -3,3 +3,6 @@
   tasks:
    - name: Install Nginx
      apt: pkg=nginx state=installed update_cache=true
+   - name: Install Java7
+     apt: pkg=java7-runtime-headless update_cache=yes state=latest
+     tags: deps

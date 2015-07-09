@@ -3,10 +3,7 @@
 
 FROM ubuntu:15.04
 
-RUN apt-get update && apt-get install -y openssh-server
-RUN apt-get install -y sudo
-RUN apt-get install -y python
-RUN apt-get install -y vim
+RUN apt-get update && apt-get install -y openssh-server sudo python vim
 RUN mkdir /var/run/sshd
 RUN echo 'root:test' | chpasswd
 RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config

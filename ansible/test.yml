@@ -1,0 +1,6 @@
+---
+- hosts: dockers
+  tasks:
+   - name: Install Java
+     apt: pkg=java-runtime-headless update_cache=yes state=latest
+     tags: deps
