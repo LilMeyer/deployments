@@ -5,3 +5,4 @@ Docker is required. Installation: [[*]](https://docs.docker.com/installation/ubu
 ```sh
 wget -qO- https://get.docker.com/ | sh
 ```
+

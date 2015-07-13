@@ -9,6 +9,11 @@ ansible all -m ping
 ansible-playbook test.yml
 ```
 
+Playbook on a specific host
+```sh
+ansible-playbook -i "debian," logstash.yml
+```
+
 References
 ----------
  - [ansible tutorial](https://serversforhackers.com/an-ansible-tutorial)

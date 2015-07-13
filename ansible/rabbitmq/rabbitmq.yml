@@ -1,0 +1,16 @@
+---
+- hosts: debian
+  tasks:
+  # RabbitMQ official install
+   - name: "add the official rabbitmq repository's key"
+     apt_key: url=https://www.rabbitmq.com/rabbitmq-signing-key-public.asc validate_certs=no
+   - name: add the official rabbitmq repository
+     copy:
+       src=rabbitmq.list
+       dest=/etc/apt/sources.list.d/
+       backup=yes
+     register: aptrepo
+   - name: install rabbitmq-server
+     apt: name=rabbitmq-server update_cache=yes
+   - name: enable rabbitmq-server to survive reboot
+     service: name=rabbitmq-server enabled=yes
