@@ -1,23 +1,24 @@
+NAME=ubuntu_sshd
 
 build:
 	cp ~/.ssh/id_rsa.pub id_rsa.pub
-	docker build -t ubuntu_sshd .
+	docker build -t $(NAME) .
 
 run:
-	docker run -d -p 32782:22 --name test_ubuntu_sshd ubuntu_sshd
+	docker run -i -t -p 27017:27017 -p 5672:5672 -p 6379:6379 --name test_$(NAME) $(NAME)
+
+start:
+	docker start test_$(NAME)
 
 stop:
-	docker stop test_ubuntu_sshd
+	docker stop test_$(NAME)
 
 rm:
-	docker rm test_ubuntu_sshd
-
-ssh:
-	ssh root@localhost -p 32782
+	docker rm test_$(NAME)
 
 clean:
-	docker stop test_ubuntu_sshd
-	docker rm test_ubuntu_sshd
-	docker rmi ubuntu_sshd
+	docker stop test_$(NAME)
+	docker rm test_$(NAME)
+	docker rmi $(NAME)
 
 .PHONY: run clean

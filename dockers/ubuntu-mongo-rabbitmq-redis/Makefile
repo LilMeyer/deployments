@@ -6,6 +6,9 @@ build:
 run:
 	docker run -i -t -p 27017:27017 -p 5672:5672 -p 6379:6379 --name test_$(NAME) $(NAME)
 
+start:
+	docker start test_$(NAME)
+
 stop:
 	docker stop test_$(NAME)
 

@@ -9,6 +9,9 @@ build:
 run:
 	docker run -d -p 32783:22 --name test_$(NAME) $(NAME)
 
+start:
+	docker start test_$(NAME)
+
 stop:
 	docker stop test_$(NAME)
 
