@@ -5,7 +5,7 @@ build:
 	docker build -t $(NAME) .
 
 run:
-	docker run -i -t -p 27017:27017 -p 5672:5672 -p 6379:6379 --name test_$(NAME) $(NAME)
+	docker run -d -p 32782:22 --name test_$(NAME) $(NAME)
 
 start:
 	docker start test_$(NAME)
@@ -15,6 +15,9 @@ stop:
 
 rm:
 	docker rm test_$(NAME)
+
+ssh:
+	ssh root@localhost -p 32782
 
 clean:
 	docker stop test_$(NAME)

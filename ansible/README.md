@@ -14,6 +14,13 @@ Playbook on a specific host
 ansible-playbook -i "debian," logstash.yml
 ```
 
+Elastic search
+--------------
+```sh
+wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.6.0.deb
+```
+
+
 References
 ----------
  - [ansible tutorial](https://serversforhackers.com/an-ansible-tutorial)

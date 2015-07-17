@@ -1,7 +1,7 @@
 FROM debian:latest
 
 # Install packages
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install openssh-server sudo
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install openssh-server sudo python
 
 RUN mkdir -p /var/run/sshd && sed -i "s/UsePrivilegeSeparation.*/UsePrivilegeSeparation no/g" /etc/ssh/sshd_config \
   && sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config \
