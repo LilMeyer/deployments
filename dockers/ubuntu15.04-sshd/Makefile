@@ -1,4 +1,4 @@
-NAME=ubuntu_sshd
+NAME=ubuntu15.04_sshd
 
 build:
 	cp ~/.ssh/id_rsa.pub id_rsa.pub
