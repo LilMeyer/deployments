@@ -21,3 +21,5 @@ RUN mkdir /data && mkdir /data/db
 RUN echo "[{rabbit, [{loopback_users, []}]}]." > /etc/rabbitmq/rabbitmq.config
 
 CMD redis-server & mongod & rabbitmq-server
+
+# rabbitmq-plugins enable rabbitmq_management
