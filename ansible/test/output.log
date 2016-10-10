@@ -1,0 +1,510 @@
+statically included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/elasticsearch-parameters.yml
+statically included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/java.yml
+statically included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/elasticsearch.yml
+statically included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/elasticsearch-optional-user.yml
+statically included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/elasticsearch-Debian.yml
+statically included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/elasticsearch-Debian-version-lock.yml
+statically included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/elasticsearch-RedHat.yml
+statically included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/elasticsearch-RedHat-version-lock.yml
+statically included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/elasticsearch-config.yml
+statically included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/elasticsearch-scripts.yml
+statically included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/elasticsearch-plugins.yml
+statically included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/xpack/elasticsearch-xpack.yml
+statically included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/xpack/shield/elasticsearch-shield.yml
+statically included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/xpack/shield/elasticsearch-shield-file.yml
+statically included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/elasticsearch-service.yml
+statically included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/elasticsearch-templates.yml
+statically included: /home/romain/perso/ansible/test/roles/elasticsearch/handlers/shield/elasticsearch-shield-native.yml
+statically included: /home/romain/perso/ansible/test/roles/elasticsearch/handlers/elasticsearch-templates.yml
+statically included: /home/romain/perso/ansible/test/roles/logstash/tasks/setup-RedHat.yml
+statically included: /home/romain/perso/ansible/test/roles/logstash/tasks/setup-Debian.yml
+statically included: /home/romain/perso/ansible/test/roles/logstash/tasks/config.yml
+statically included: /home/romain/perso/ansible/test/roles/logstash/tasks/ssl.yml
+statically included: /home/romain/perso/ansible/test/roles/logstash/tasks/plugins.yml
+statically included: /home/romain/perso/ansible/test/roles/kibana/tasks/setup-RedHat.yml
+statically included: /home/romain/perso/ansible/test/roles/kibana/tasks/setup-Debian.yml
+
+PLAY [Elasticsearch with custom configuration] *********************************
+
+TASK [setup] *******************************************************************
+ok: [server-root]
+
+TASK [elasticsearch : os-specific vars] ****************************************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : fail] ****************************************************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : fail] ****************************************************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : debug] ***************************************************
+basic
+ok: [server-root] => {
+    "msg": "WARNING - It is recommended you specify the parameter 'http.port' when multicast is disabled"
+}
+
+TASK [elasticsearch : debug] ***************************************************
+basic
+ok: [server-root] => {
+    "msg": "WARNING - It is recommended you specify the parameter 'transport.tcp.port' when multicast is disabled"
+}
+
+TASK [elasticsearch : debug] ***************************************************
+basic
+ok: [server-root] => {
+    "msg": "WARNING - It is recommended you specify the parameter 'discovery.zen.ping.unicast.hosts' when multicast is disabled"
+}
+
+TASK [elasticsearch : fail] ****************************************************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : fail] ****************************************************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : fail] ****************************************************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+skipping: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+ok: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : RedHat - Ensure Java is installed] ***********************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : Debian - Ensure Java is installed] ***********************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : Ensure optional elasticsearch group is created with the correct id.] ***
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : Ensure optional elasticsearch user is created with the correct id.] ***
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : Debian - Add Elasticsearch repository key] ***************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : Debian - add elasticsearch repository] *******************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : Debian - hold elasticsearch version] *********************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : Debian - Ensure elasticsearch is installed] **************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : Debian - Download elasticsearch from url] ****************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : Debian - Ensure elasticsearch is installed from downloaded package] ***
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : python-httplib2] *****************************************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : Ensure libselinux-python on CentOS 6.x] ******************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : RedHat - add Elasticsearch repo] *************************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : RedHat - install yum-version-lock] ***********************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : RedHat - lock elasticsearch version] *********************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : RedHat - Install Elasticsearch] **************************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : RedHat - Install Elasticsearch from url] *****************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : python-httplib2] *****************************************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : Create Directories] **************************************
+ok: [server-root] => (item=/var/run/elasticsearch/server-root-node1)
+ok: [server-root] => (item=/tmp/elasticsearch/server-root-node1)
+ok: [server-root] => (item=/var/log/elasticsearch/server-root-node1)
+basic
+ok: [server-root] => (item=/etc/elasticsearch/node1)
+
+TASK [elasticsearch : Create Data Directories] *********************************
+basic
+ok: [server-root] => (item=/var/lib/elasticsearch/server-root-node1)
+
+TASK [elasticsearch : Copy Configuration File] *********************************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : Copy Default File for Instance] **************************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : Copy Debian Init File for Instance] **********************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : Copy Redhat Init File for Instance] **********************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : Copy Systemd File for Instance] **************************
+skipping: [server-root]
+
+TASK [elasticsearch : Copy Logging.yml File for Instance] **********************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : Delete Default Init] *************************************
+ok: [server-root]
+
+TASK [elasticsearch : Delete Default Environment File] *************************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : Delete Default Environment File] *************************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : Delete Default Sysconfig File] ***************************
+ok: [server-root]
+
+TASK [elasticsearch : Delete Default Configuration File] ***********************
+ok: [server-root]
+
+TASK [elasticsearch : Delete Default Logging File] *****************************
+ok: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+skipping: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+skipping: [server-root]
+
+TASK [elasticsearch : Create script dir] ***************************************
+skipping: [server-root]
+
+TASK [elasticsearch : Copy default scripts to elasticsearch] *******************
+skipping: [server-root]
+
+TASK [elasticsearch : Copy scripts to elasticsearch] ***************************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : command] *************************************************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : Remove elasticsearch plugins] ****************************
+basic
+
+TASK [elasticsearch : Install elasticsearch plugins] ***************************
+basic
+
+TASK [elasticsearch : Set Plugin Directory Permissions] ************************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : Check License is installed] ******************************
+basic
+ok: [server-root]
+
+TASK [elasticsearch : Remove license plugin] ***********************************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : Install license plugin] **********************************
+basic
+skipping: [server-root]
+
+TASK [elasticsearch : include] *************************************************
+basic
+included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/xpack/elasticsearch-xpack-install.yml for server-root
+included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/xpack/elasticsearch-xpack-install.yml for server-root
+included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/xpack/elasticsearch-xpack-install.yml for server-root
+included: /home/romain/perso/ansible/test/roles/elasticsearch/tasks/xpack/elasticsearch-xpack-install.yml for server-root
+
+TASK [elasticsearch : command] *************************************************
+basic
+ok: [server-root]
+basic
+
+TASK [elasticsearch : Remove watcher plugin] ***********************************
+skipping: [server-root]
+
+TASK [elasticsearch : Install watcher plugin] **********************************
+skipping: [server-root]
+
+TASK [elasticsearch : command] *************************************************
+ok: [server-root]
+
+TASK [elasticsearch : Remove marvel-agent plugin] ******************************
+skipping: [server-root]
+
+TASK [elasticsearch : Install marvel-agent plugin] *****************************
+skipping: [server-root]
+
+TASK [elasticsearch : command] *************************************************
+ok: [server-root]
+
+TASK [elasticsearch : Remove graph plugin] *************************************
+skipping: [server-root]
+
+TASK [elasticsearch : Install graph plugin] ************************************
+skipping: [server-root]
+
+TASK [elasticsearch : command] *************************************************
+ok: [server-root]
+
+TASK [elasticsearch : Remove shield plugin] ************************************
+skipping: [server-root]
+
+TASK [elasticsearch : Install shield plugin] ***********************************
+skipping: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+skipping: [server-root]
+
+TASK [elasticsearch : List Users] **********************************************
+skipping: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+skipping: [server-root]
+
+TASK [elasticsearch : Remove Users] ********************************************
+skipping: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+skipping: [server-root]
+
+TASK [elasticsearch : Add Users] ***********************************************
+skipping: [server-root]
+
+TASK [elasticsearch : Set User Passwords] **************************************
+skipping: [server-root]
+
+TASK [elasticsearch : set_fact] ************************************************
+skipping: [server-root]
+
+TASK [elasticsearch : Copy roles.yml File for Instance] ************************
+skipping: [server-root]
+
+TASK [elasticsearch : Copy User Roles] *****************************************
+skipping: [server-root]
+
+TASK [elasticsearch : command] *************************************************
+skipping: [server-root]
+
+TASK [elasticsearch : Copy role_mapping.yml File for Instance] *****************
+skipping: [server-root]
+
+TASK [elasticsearch : Copy message auth key to elasticsearch] ******************
+skipping: [server-root]
+
+TASK [elasticsearch : Ensure shield conf directory exists] *********************
+skipping: [server-root]
+
+TASK [elasticsearch : Set Plugin Directory Permissions] ************************
+ok: [server-root]
+
+TASK [elasticsearch : Start elasticsearch service] *****************************
+ok: [server-root]
+
+TASK [elasticsearch : file] ****************************************************
+skipping: [server-root]
+
+TASK [elasticsearch : Copy default templates to elasticsearch] *****************
+skipping: [server-root]
+
+TASK [elasticsearch : Copy templates to elasticsearch] *************************
+
+TASK [logstash : Add Elasticsearch GPG key.] ***********************************
+skipping: [server-root]
+
+TASK [logstash : Add Logstash repository.] *************************************
+skipping: [server-root]
+
+TASK [logstash : Install Logstash.] ********************************************
+skipping: [server-root]
+
+TASK [logstash : Add Elasticsearch apt key.] ***********************************
+ok: [server-root]
+
+TASK [logstash : Add Logstash repository.] *************************************
+ok: [server-root]
+
+TASK [logstash : Check if Logstash is already installed.] **********************
+ok: [server-root]
+
+TASK [logstash : Update apt cache if repository just added.] *******************
+skipping: [server-root]
+
+TASK [logstash : Install Logstash.] ********************************************
+ok: [server-root]
+
+TASK [logstash : Add Logstash user to adm group (Debian).] *********************
+ok: [server-root]
+
+TASK [logstash : Create Logstash configuration files.] *************************
+ok: [server-root] => (item=01-beats-input.conf)
+ok: [server-root] => (item=30-elasticsearch-output.conf)
+
+TASK [logstash : Create Logstash filters.] *************************************
+ok: [server-root] => (item=10-syslog.conf)
+ok: [server-root] => (item=11-nginx.conf)
+ok: [server-root] => (item=12-apache.conf)
+ok: [server-root] => (item=14-solr.conf)
+ok: [server-root] => (item=15-drupal.conf)
+
+TASK [logstash : Create Logstash configuration file for local syslog.] *********
+ok: [server-root]
+
+TASK [logstash : Ensure configuration for local syslog is absent if disabled.] *
+skipping: [server-root]
+
+TASK [logstash : Ensure Logstash SSL key pair directory exists.] ***************
+skipping: [server-root]
+
+TASK [logstash : Copy SSL key and cert for logstash-forwarder.] ****************
+skipping: [server-root] => (item=) 
+skipping: [server-root] => (item=) 
+
+TASK [logstash : Get list of installed plugins.] *******************************
+ok: [server-root]
+
+TASK [logstash : Install configured plugins.] **********************************
+skipping: [server-root] => (item=logstash-input-beats) 
+
+TASK [logstash : Ensure Logstash is started and enabled on boot.] **************
+ok: [server-root]
+
+TASK [kibana : Add Elasticsearch GPG key.] *************************************
+skipping: [server-root]
+
+TASK [kibana : Add Kibana repository.] *****************************************
+skipping: [server-root]
+
+TASK [kibana : Ensure dependency is installed (Ubuntu).] ***********************
+ok: [server-root]
+
+TASK [kibana : Add Elasticsearch apt key.] *************************************
+ok: [server-root]
+
+TASK [kibana : Add Kibana repository.] *****************************************
+ok: [server-root]
+
+TASK [kibana : Install Kibana.] ************************************************
+ok: [server-root]
+
+TASK [kibana : Ensure Kibana is started and enabled at boot.] ******************
+ok: [server-root]
+
+TASK [kibana : Copy Kibana configuration.] *************************************
+ok: [server-root]
+
+TASK [copy] ********************************************************************
+ok: [server-root]
+
+PLAY RECAP *********************************************************************
+server-root                : ok=63   changed=0    unreachable=0    failed=0   
+

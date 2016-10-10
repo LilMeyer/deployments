@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:8
 
 # Install packages
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install openssh-server sudo python
@@ -10,7 +10,7 @@ RUN mkdir -p /var/run/sshd && sed -i "s/UsePrivilegeSeparation.*/UsePrivilegeSep
 RUN echo 'root:test' | chpasswd
 
 RUN mkdir /root/.ssh
-ADD id_rsa.pub /root/.ssh/authorized_keys
+ADD ~/.ssh/id_rsa.pub /root/.ssh/authorized_keys
 RUN chmod 755 /root/.ssh/authorized_keys
 
 ## Set a default user. Available via runtime flag `--user docker`

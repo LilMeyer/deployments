@@ -1,0 +1,10 @@
+---
+- name: Elasticsearch with custom configuration
+  hosts: all
+  tasks:
+    - copy: src=.bashrc dest=~/
+  roles:
+    - { role: elasticsearch, es_instance_name: "node1" }
+    - { role: logstash }
+    - { role: kibana }
+  vars:

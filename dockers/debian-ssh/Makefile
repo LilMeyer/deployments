@@ -3,27 +3,26 @@ NAME=debian_ssd
 PORT=32783
 
 build:
-	cp ~/.ssh/id_rsa.pub id_rsa.pub
 	docker build -t $(NAME) .
 
 run:
-	docker run -d -p 32783:22 --name test_$(NAME) $(NAME)
+	docker run -d -p 32783:22 --name $(NAME) $(NAME)
 
 start:
-	docker start test_$(NAME)
+	docker start $(NAME)
 
 stop:
-	docker stop test_$(NAME)
+	docker stop $(NAME)
 
 rm:
-	docker rm test_$(NAME)
+	docker rm $(NAME)
 
 ssh:
 	ssh root@localhost -p 32783
 
 clean:
-	docker stop test_$(NAME)
-	docker rm test_$(NAME)
+	docker stop $(NAME)
+	docker rm $(NAME)
 	docker rmi $(NAME)
 
 .PHONY: run clean
